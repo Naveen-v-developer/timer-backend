@@ -4,7 +4,8 @@ const {
   registerUser,
   loginUser,
   getMe,
-  logoutUser
+  logoutUser,
+   googleLogin
 } = require("../controllers/authController");
 
 const protect = require("../middlewares/authMiddleware");

@@ -1,4 +1,4 @@
-const Timer = require('../models/Timer');
+const Timer = require('../models/Session');
 
 exports.startSession = async (req, res) => {
   try {

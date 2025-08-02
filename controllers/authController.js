@@ -62,3 +62,4 @@ exports.getMe = async (req, res) => {
 exports.logoutUser = (req, res) => {
   res.status(200).json({ msg: "Logout successful. Please clear token on client." });
 };
+
