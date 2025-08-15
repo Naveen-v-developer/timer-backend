@@ -76,3 +76,19 @@ exports.deleteTask = async (req, res) => {
     res.status(500).json({ message: "Error deleting task" });
   }
 };
+
+// controllers/taskController.js
+exports.getNextTask = async (req, res) => {
+  try {
+    const task = await Task.findOne({
+      userId: req.user._id,
+      completed: false
+    }).sort({ createdAt: 1 });
+
+    if (!task) return res.status(404).json({ message: "No pending tasks found" });
+
+    res.json(task);
+  } catch (error) {
+    res.status(500).json({ message: "Error fetching next task" });
+  }
+};

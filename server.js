@@ -16,6 +16,8 @@ const cycleRoutes = require("./routes/cycleRoutes");
 const statsRoutes = require("./routes/statsRoutes");
 const adminRoutes = require("./routes/adminRoutes");
 const taskRoutes = require("./routes/taskRoutes");
+// In your main app.js or server.js
+const daysessionRoutes = require('./routes/daysession');
 
 dotenv.config();
 const app = express();
@@ -51,6 +53,7 @@ app.use("/api/cycle", cycleRoutes);
 app.use("/api/stats", statsRoutes);
 app.use("/api/admin", adminRoutes);
 app.use("/api/tasks", taskRoutes);
+app.use('/api/session', daysessionRoutes);
 
 // ✅ MongoDB connection and server start
 mongoose.connect(process.env.MONGO_URI)

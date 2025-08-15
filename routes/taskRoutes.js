@@ -8,4 +8,7 @@ router.post("/", protect, taskController.addTask);
 router.put("/:id", protect, taskController.updateTask);
 router.delete("/:id", protect, taskController.deleteTask);
 router.patch("/:id/complete", protect, taskController.toggleCompletion);
+router.get("/next", protect, taskController.getNextTask);
+
+
 module.exports = router;

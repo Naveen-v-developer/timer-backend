@@ -6,7 +6,7 @@ exports.predictBreakDuration = async (req, res) => {
 
   try {
     // Call Flask ML server
-    const response = await axios.post("http://localhost:5001/api/predict/break-duration", {
+    const response = await axios.post("https://timer-ml.onrender.com/api/predict/break-duration", {
       session_length: sessionLength,
       rating: rating,
     });
