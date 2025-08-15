@@ -27,7 +27,7 @@ app.use(compression());
 
 // ✅ CORS Middleware
 app.use(cors({
-  origin: "http://localhost:3000", // or frontend URL
+  origin: "https://focusbuzzproduct.vercel.app", // or frontend URL
   credentials: true,
 }));
 
